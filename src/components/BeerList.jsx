@@ -1,5 +1,6 @@
 import React from 'react';
-import Keg from './Keg';
+import { Switch, Route, Link } from 'react-router-dom';
+import Beer from './Beer';
 
 const state = {
   masterKegList: [
@@ -54,12 +55,20 @@ const state = {
   ]
 }
 
-function KegList(){
+function BeerList(){
 
   return(
     <div>
+      <Link to="/">Beer List</Link>
+      <br/>
+      <Link to="/less-than-10">Less Than 10 pints</Link>
+      <br/>
+      <Link to="/low-price">Less than $5</Link>
+      <br/>
+
+    <div>
       {state.masterKegList.map((entry, index) =>
-        <Keg name={entry.name}
+        <Beer name={entry.name}
           brewer={entry.brewer}
           description={entry.description}
           abv={entry.abv}
@@ -67,8 +76,25 @@ function KegList(){
           remaining={entry.remaining}
           key={index} />
       )}
+      <Switch>
+        <Route exact path='/less-than-10' component={() => <Beer
+          name={masterKegList[5].name}
+          brewer={masterKegList[5].brewer}
+          description={masterKegList[5].description}
+          abv={masterKegList[5].abv}
+          price={masterKegList[5].price}
+          remaining={masterKegList[5].remaining} />} />
+        <Route exact path='/low-price' component={() => <Beer
+          name={masterKegList[2].name}
+          brewer={masterKegList[2].brewer}
+          description={masterKegList[2].description}
+          abv={masterKegList[2].abv}
+          price={masterKegList[2].price}
+          remaining={masterKegList[2].remaining} />} />
+        </Switch>
     </div>
+  </div>
   );
 }
 
-export default KegList;
+export default BeerList;
