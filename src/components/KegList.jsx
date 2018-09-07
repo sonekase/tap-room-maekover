@@ -1,5 +1,5 @@
 import React from 'react';
-import CurrentKeg from './CurrentKeg';
+import Keg from './Keg';
 
 const state = {
   masterKegList: [

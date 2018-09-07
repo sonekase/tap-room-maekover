@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function CurrentKeg(props){
+function Keg(props){
   return (
     <div>
       <h2>{props.name}</h2>
@@ -14,7 +14,7 @@ function CurrentKeg(props){
   );
 }
 
-CurrentKeg.propTypes = {
+Keg.propTypes = {
   name: PropTypes.string.isRequired,
   brewer: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
@@ -23,4 +23,4 @@ CurrentKeg.propTypes = {
   remaining: PropTypes.string.isRequired
 };
 
-export default CurrentKeg;
+export default Keg;
