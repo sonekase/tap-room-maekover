@@ -18,7 +18,7 @@ function App(){
       <div className="container">
         <Header/>
         <Switch>
-          <Route exact path='/' component={BeerList} />
+          <Route exact path='/' component={KegList} />
         </Switch>
       </div>
     </div>
