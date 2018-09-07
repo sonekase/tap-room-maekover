@@ -1,11 +1,10 @@
 import React from 'react';
 import Header from './Header';
 import bg from './../img/taps.jpg';
+import KegList from './KegList';
 
 function App(){
-  var containerStyle = {
-    backgroundColor: 'rgb(255, 255, 255, 0.4)'
-  }
+
   return (
     <div>
       <style jsx>{`
@@ -17,6 +16,7 @@ function App(){
         `}</style>
       <div className="container">
         <Header/>
+        <KegList/>
       </div>
     </div>
 
