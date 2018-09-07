@@ -6,23 +6,23 @@ import { Switch, Route } from 'react-router-dom';
 
 function App(){
 
+
   return (
     <div>
       <style jsx>{`
-        body {
+        .landing {
           background-image: url(${bg});
-          background-size: cover;
+          background-size: contain;
           background-repeat: no-repeat;
         }
         `}</style>
-      <div className="container">
-        <Header/>
+      <Header />
+      <div className="landing">
         <Switch>
           <Route exact path='/' component={KegList} />
         </Switch>
       </div>
     </div>
-
   );
 }
 
