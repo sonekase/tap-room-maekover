@@ -1,9 +1,8 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
 import CurrentKeg from './CurrentKeg';
 
 const state = {
-  KegList: [
+  masterKegList: [
     {
       name: 'Ruby Zozzle',
       brewer: 'Hi-Wheel',
@@ -55,68 +54,18 @@ const state = {
   ]
 }
 
-function Kegs(){
-
+function KegList(){
   return(
     <div>
-      <br/>
-      <Link to="/Ruby">Ruby Zozzle </Link>
-      <br/>
-      <Link to="/Tarn">Tarn N Juicy </Link>
-      <br/>
-      <Link to="/Hamms">Hamm's </Link>
-      <br/>
-      <Link to="/Prismatic">Prismatic </Link>
-      <br/>
-      <Link to="/Juicy">Juicy Haze </Link>
-      <br/>
-      <Link to="/Eight">8 Hop </Link>
-      <br/>
-
-      <Switch>
-        <Route exact path='/Ruby' component={() => <CurrentKeg
-          name={KegList[0].name}
-          brewer={KegList[0].brewer}
-          description={KegList[0].description}
-          abv={KegList[0].abv}
-          price={KegList[0].price}
-          remaining={KegList[0].remaining} />} />
-        <Route exact path='/Tarn' component={() => <CurrentKeg
-          name={KegList[1].name}
-          brewer={KegList[1].brewer}
-          description={KegList[1].description}
-          abv={KegList[1].abv}
-          price={KegList[1].price}
-          remaining={KegList[1].remaining} />} />
-        <Route exact path='/Hamms' component={() => <CurrentKeg
-          name={KegList[2].name}
-          brewer={KegList[2].brewer}
-          description={KegList[2].description}
-          abv={KegList[2].abv}
-          price={KegList[2].price}
-          remaining={KegList[2].remaining} />} />
-        <Route exact path='/Prismatic' component={() => <CurrentKeg
-          name={KegList[3].name}
-          brewer={KegList[3].brewer}
-          description={KegList[3].description}
-          abv={KegList[3].abv}
-          price={KegList[3].price}
-          remaining={KegList[3].remaining} />} />
-        <Route exact path='/Juicy' component={() => <CurrentKeg
-          name={KegList[4].name}
-          brewer={KegList[4].brewer}
-          description={KegList[4].description}
-          abv={KegList[4].abv}
-          price={KegList[4].price}
-          remaining={KegList[4].remaining} />} />
-        <Route exact path='/Eight' component={() => <CurrentKeg
-          name={KegList[5].name}
-          brewer={KegList[5].brewer}
-          description={KegList[5].description}
-          abv={KegList[5].abv}
-          price={KegList[5].price}
-          remaining={KegList[5].remaining} />} />
-      </Switch>
+      {state.masterKegList.map((entry, index) =>
+        <Keg name={entry.name}
+          brewer={entry.brewer}
+          description={entry.description}
+          abv={entry.abv}
+          price={entry.price}
+          remaining={entry.remaining}
+          key={index} />
+      )}
     </div>
   );
 }

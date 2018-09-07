@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import bg from './../img/taps.jpg';
 import KegList from './KegList';
+import { Switch, Route } from 'react-router-dom';
 
 function App(){
 
@@ -16,7 +17,9 @@ function App(){
         `}</style>
       <div className="container">
         <Header/>
-        <KegList/>
+        <Switch>
+          <Route exact path='/' component={KegList} />
+        </Switch>
       </div>
     </div>
 
