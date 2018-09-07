@@ -2,14 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Keg(props){
+  var kegStyle = {
+    padding: '10',
+    height: '350',
+    width: '350',
+  }
   return (
-    <div>
-      <h2>{props.name}</h2>
-      <h3>{props.brewer}</h3>
-      <h3>{props.description}</h3>
-      <h3>{props.abv}</h3>
-      <h3>{props.price}</h3>
-      <h3>{props.remaining}</h3>
+    <div style={kegStyle}>
+      <h3>{props.name}</h3>
+      <p>{props.brewer}</p>
+      <p>{props.description}</p>
+      <p>{props.abv}</p>
+      <p>{props.price}</p>
+      <p>{props.remaining}</p>
     </div>
   );
 }
