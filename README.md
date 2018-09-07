@@ -8,6 +8,9 @@
 
 Tap Room is an application that allows a user to view a list of beer and information about it. This project is a makeover of an application utilizing React library.
 
+## Images-In-ReadMe
+[TapRoomStructure.pdf](https://github.com/sonekase/tap-room-maekover/files/2362091/TapRoomStructure.pdf)
+
 ## Installation 
 
 * Clone repository "tap-room-react".
