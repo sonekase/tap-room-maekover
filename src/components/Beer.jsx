@@ -7,7 +7,7 @@ function Beer(props){
       <style jsx>{`
         .beerInfo {
           color: #FFF;
-          background-color: rgba(0,0,0,0.7);
+          background-color: rgba(0,0,0,0.8);
           height: 25%;
           width: 105%;
           padding-top: 5%;

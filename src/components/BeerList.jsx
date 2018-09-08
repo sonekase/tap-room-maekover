@@ -66,7 +66,7 @@ function BeerList(){
 
   return(
     <div>
-      <Link style={linkStyle} to="/">Beer List</Link> | <Link style={linkStyle} to="/low-price">-$5 Beer</Link> | <Link style={linkStyle}  to="/less-than-10">-10 Pints</Link>
+      <Link style={linkStyle} to="/">BEER LIST</Link> | <Link style={linkStyle} to="/low-price">-$5 BEER</Link> | <Link style={linkStyle}  to="/less-than-10">-10 PINTS</Link>
 
     <div>
       {state.masterKegList.map((entry, index) =>
