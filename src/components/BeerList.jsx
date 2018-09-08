@@ -25,7 +25,7 @@ const state = {
       brewer: 'Maui Brewing Cō',
       description: 'Maui pineapple gives sweet aroma to this tropical brew',
       abv: '4.7%',
-      price: '3',
+      price: '5',
       remaining: '65'
     },
     {
@@ -33,7 +33,7 @@ const state = {
       brewer: 'Kona Brewing Cō',
       description: 'Subtle chocolate malt flavor',
       abv:  '5.9%',
-      price: '6',
+      price: '5',
       remaining: '75'
     },
     {
@@ -49,7 +49,7 @@ const state = {
       brewer: 'Kona Brewing Cō',
       description: 'Deliciously sweet-tasting lychee onolicious beer',
       abv:  '5.5%',
-      price: '6',
+      price: '7',
       remaining: '58'
     }
   ]
@@ -66,7 +66,7 @@ function BeerList(){
 
   return(
     <div>
-      <Link style={linkStyle} to="/">BEER LIST</Link> | <Link style={linkStyle} to="/low-price">-$5 BEER</Link> | <Link style={linkStyle}  to="/less-than-10">-10 PINTS</Link>
+      <Link style={linkStyle} to="/">BEER LIST</Link> | <Link style={linkStyle} to="/low-price">$5 BEER</Link> | <Link style={linkStyle}  to="/less-than-10">-10 PINTS</Link>
 
     <div>
       {state.masterKegList.map((entry, index) =>
