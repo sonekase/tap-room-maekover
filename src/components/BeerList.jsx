@@ -57,7 +57,7 @@ const state = {
 
 function BeerList(){
   var linkStyle = {
-    color: '#ea925b',
+    color: '#FA5900',
     marginLeft: '18',
     marginRight: '18',
     fontWeight: 'bolder',
