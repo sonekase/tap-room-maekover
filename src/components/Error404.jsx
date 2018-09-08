@@ -8,10 +8,11 @@ function Error404(props) {
         .errorStyle {
           color: #FFF;
           background-color: rgba(0,0,0,0.8);
-          height: 25%;
+          height: 275%;
           width: 104%;
           margin-top: 5%;
           padding-top: 10%;
+          margin-bottom: 50%;
         }
         a {
           color: #FA5900;
