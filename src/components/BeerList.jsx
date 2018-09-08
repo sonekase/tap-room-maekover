@@ -66,7 +66,7 @@ function BeerList(){
 
   return(
     <div>
-      <Link style={linkStyle} to="/">BEER LIST</Link> | <Link style={linkStyle} to="/low-price">$5 BEER</Link> | <Link style={linkStyle}  to="/less-than-10">-10 PINTS</Link>
+      <Link style={linkStyle} to="/">BEER LIST</Link> | <Link style={linkStyle} to="/cheep-beer">$5 BEER</Link> | <Link style={linkStyle}  to="/low-beer">-10 PINTS</Link>
 
     <div>
       {state.masterKegList.map((entry, index) =>
@@ -79,20 +79,20 @@ function BeerList(){
           key={index} />
       )}
       <Switch>
-        <Route exact path='/less-than-10' component={() => <Beer
-          name={masterKegList[5].name}
-          brewer={masterKegList[5].brewer}
-          description={masterKegList[5].description}
-          abv={masterKegList[5].abv}
-          price={masterKegList[5].price}
-          remaining={masterKegList[5].remaining} />} />
-        <Route exact path='/low-price' component={() => <Beer
+        <Route exact path='/cheep-beer' component={() => <Beer
           name={masterKegList[2].name}
           brewer={masterKegList[2].brewer}
           description={masterKegList[2].description}
           abv={masterKegList[2].abv}
           price={masterKegList[2].price}
           remaining={masterKegList[2].remaining} />} />
+        <Route exact path='/low-beer' component={() => <Beer
+          name={masterKegList[5].name}
+          brewer={masterKegList[5].brewer}
+          description={masterKegList[5].description}
+          abv={masterKegList[5].abv}
+          price={masterKegList[5].price}
+          remaining={masterKegList[5].remaining} />} />
         </Switch>
     </div>
   </div>
