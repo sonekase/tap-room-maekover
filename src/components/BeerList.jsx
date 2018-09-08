@@ -5,49 +5,49 @@ import Beer from './Beer';
 const state = {
   masterKegList: [
     {
-      name: 'Ruby Zozzle',
-      brewer: 'Hi-Wheel',
-      description: 'Sparkling Wine & Grapefruit',
-      abv: '6.8%',
+      name: 'Bikini Blonde',
+      brewer: 'Maui Brewing Cō',
+      description: 'Clean, crisp & refreshing',
+      abv: '5.2%',
       price: '7',
       remaining: '20'
     },
     {
-      name: 'Tart N Juicy',
-      brewer: 'Epic',
-      description: 'Sour IPA',
-      abv: '4.5%',
+      name: 'Big Swell IPA',
+      brewer: 'Maui Brewing Cō',
+      description: 'Tropical citrus hops burst',
+      abv: '6.8%',
       price: '6',
       remaining: '60'
     },
     {
-      name: 'Hamm\'s',
-      brewer: 'Miller/Coors',
-      description: 'American Lager',
+      name: 'Pineapple Mana',
+      brewer: 'Maui Brewing Cō',
+      description: 'Maui pineapple gives sweet aroma to this tropical brew',
       abv: '4.7%',
       price: '3',
       remaining: '65'
     },
     {
-      name: 'Prismatic',
-      brewer: 'Ninkasi',
-      description: 'Juicy IPA',
+      name: 'Lavaman Red',
+      brewer: 'Kona Brewing Cō',
+      description: 'Subtle chocolate malt flavor',
       abv:  '5.9%',
       price: '6',
       remaining: '75'
     },
     {
-      name: 'Juicy Haze',
-      brewer: 'New Belgium',
-      description: 'India Pale Ale',
+      name: 'Pipeline Porter',
+      brewer: 'Kona Brewing Cō',
+      description: 'Earthy complexity and smooth Kona coffee finish',
       abv:  '7.5%',
       price: '6',
       remaining: '18'
     },
     {
-      name: '8 Hop',
-      brewer: 'New Belgium',
-      description: 'Pale Ale',
+      name: 'Lychee Lager',
+      brewer: 'Kona Brewing Cō',
+      description: 'Deliciously sweet-tasting lychee onolicious beer',
       abv:  '5.5%',
       price: '6',
       remaining: '58'
@@ -57,7 +57,7 @@ const state = {
 
 function BeerList(){
   var linkStyle = {
-    color: '#e8c496',
+    color: '#ea925b',
     marginLeft: '18',
     marginRight: '18',
     fontWeight: 'bolder',

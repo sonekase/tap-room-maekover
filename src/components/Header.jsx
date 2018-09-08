@@ -26,7 +26,7 @@ function Header() {
         `}</style>
         <div className="Header">
           <h1>TAP HOUSE</h1>
-          <h2>Artisanal Brewery</h2>
+          <h2>Island Crafers</h2>
         </div>
     </div>
   );

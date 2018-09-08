@@ -10,13 +10,13 @@ function Beer(props){
           background-color: rgba(0,0,0,0.8);
           height: 25%;
           width: 105%;
-          padding-top: 5%;
+          padding-top: 3%;
         }
         li {
           list-style: none;
           display: inline-block;
           font-size: 20px;
-          margin-top: -5%;
+          margin-top: -4%;
           font-weight: lighter;
         }
         a {
