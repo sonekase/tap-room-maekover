@@ -80,19 +80,19 @@ function BeerList(){
       )}
       <Switch>
         <Route exact path='/cheep-beer' component={() => <Beer
-          name={masterKegList[2].name}
-          brewer={masterKegList[2].brewer}
-          description={masterKegList[2].description}
-          abv={masterKegList[2].abv}
-          price={masterKegList[2].price}
-          remaining={masterKegList[2].remaining} />} />
+          name={state.masterKegList[2].name}
+          brewer={state.masterKegList[2].brewer}
+          description={state.masterKegList[2].description}
+          abv={state.masterKegList[2].abv}
+          price={state.masterKegList[2].price}
+          remaining={state.masterKegList[2].remaining} />} />
         <Route exact path='/low-beer' component={() => <Beer
-          name={masterKegList[5].name}
-          brewer={masterKegList[5].brewer}
-          description={masterKegList[5].description}
-          abv={masterKegList[5].abv}
-          price={masterKegList[5].price}
-          remaining={masterKegList[5].remaining} />} />
+          name={state.masterKegList[5].name}
+          brewer={state.masterKegList[5].brewer}
+          description={state.masterKegList[5].description}
+          abv={state.masterKegList[5].abv}
+          price={state.masterKegList[5].price}
+          remaining={state.masterKegList[5].remaining} />} />
         </Switch>
     </div>
   </div>
