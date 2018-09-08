@@ -3,7 +3,6 @@ import Header from './Header';
 import BeerList from './BeerList';
 import Background from './Background';
 import Error404 from './Error404';
-import Beer from './Beer';
 import { Switch, Route } from 'react-router-dom';
 
 function App(){
