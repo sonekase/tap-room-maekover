@@ -56,15 +56,17 @@ const state = {
 }
 
 function BeerList(){
+  var linkStyle = {
+    color: '#e8c496',
+    marginLeft: '18',
+    marginRight: '18',
+    fontWeight: 'bolder',
+    fontSize: '16',
+  }
 
   return(
     <div>
-      <Link to="/">Beer List</Link>
-      <br/>
-      <Link to="/less-than-10">Less Than 10 pints</Link>
-      <br/>
-      <Link to="/low-price">Less than $5</Link>
-      <br/>
+      <Link style={linkStyle} to="/">Beer List</Link> | <Link style={linkStyle} to="/low-price">-$5 Beer</Link> | <Link style={linkStyle}  to="/less-than-10">-10 Pints</Link>
 
     <div>
       {state.masterKegList.map((entry, index) =>

@@ -3,22 +3,35 @@ import PropTypes from 'prop-types';
 
 function Beer(props){
   return(
-    <div className="infoBg">
+    <div className="beerInfo">
       <style jsx>{`
-        .infoBg {
-          font-size: 20px;
-          padding: 20px;
+        .beerInfo {
+          color: #FFF;
+          background-color: rgba(0,0,0,0.7);
+          height: 25%;
+          width: 105%;
+          padding-top: 5%;
         }
         li {
           list-style: none;
+          display: inline-block;
+          font-size: 20px;
+          margin-top: -5%;
+          font-weight: lighter;
+        }
+        a {
+          color: #FFF;
         }
         `}</style>
       <ul>
         <li>{props.name}</li>
+        <br/>
         <li>{props.brewer}</li>
+        <br/>
         <li>{props.description}</li>
-        <li>{props.abv}</li>
-        <li>{props.price}</li>
+        <br/>
+        <li>{props.abv}</li> |
+        <li>${props.price}</li> |
         <li>{props.remaining}</li>
       </ul>
     </div>

@@ -11,7 +11,7 @@ Tap Room is an application that allows a user to view a list of beer and informa
 ## Images-In-ReadMe
 [TapRoomStructure.pdf](https://github.com/sonekase/tap-room-maekover/files/2362091/TapRoomStructure.pdf)
 
-## Installation 
+## Installation
 
 * Clone repository "tap-room-react".
 
@@ -43,6 +43,10 @@ For any questions or support details, please email:
 ## Specification
 
 * As a patron, I want to see a list/menu of all available kegs. For each keg, I need to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
+
+* User should be able to click to see beers that are less than $5.
+
+* User should be able to click to see all beers that are less than 10 remaining.
 
 ## React Tap Room Makeover Requirements
 

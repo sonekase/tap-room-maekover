@@ -1,22 +1,18 @@
 import React from 'react';
 import Header from './Header';
-import bg from './../img/taps.jpg';
 import BeerList from './BeerList';
+import Background from './Background';
 
 function App(){
 
 
   return (
-    <div>
-      <style jsx>{`
-        body {
-          background-image: url(${bg});
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-        `}</style>
-      <div>
+    <div className="Row">
+      <div className="col-md-8">
+        <Background/>
         <Header/>
+      </div>
+      <div className="col-md-4">
         <BeerList/>
       </div>
     </div>

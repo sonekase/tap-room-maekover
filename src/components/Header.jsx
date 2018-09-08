@@ -5,22 +5,22 @@ function Header() {
     <div>
       <style jsx>{`
         .Header {
-          float: left;
           color: #FFF;
           font-family: sans-serif;
-          margin-top: 35%;
-          position: sticky;
+          margin-top: 25%;
           border-style: solid;
           border-color: #FFF;
+          border-width: thick;
           padding: 10px;
-          margin-left: 3%;
+          width: 50%;
+          position: sticky;
         }
         h1 {
-          font-size: 7em;
+          font-size: 5em;
         }
         h2 {
           margin-top: -5%;
-          font-size: 40px;
+          font-size: 35px;
           margin-left: 4%;
         }
         `}</style>
