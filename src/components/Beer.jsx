@@ -9,7 +9,7 @@ function Beer(props){
           color: #FFF;
           background-color: rgba(0,0,0,0.8);
           height: 25%;
-          width: 105%;
+          width: 104%;
           padding-top: 3%;
         }
         li {
