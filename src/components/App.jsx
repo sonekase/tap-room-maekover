@@ -4,6 +4,7 @@ import BeerList from './BeerList';
 import Background from './Background';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
+import NewBeer from './NewBeer';
 
 function App(){
 
@@ -17,6 +18,7 @@ function App(){
       <div className="col-md-4">
         <Switch>
         <Route exact path='/' component={BeerList} />
+        <Route exact path='/newbeer' component={NewBeer} />
         <Route component={Error404} />
       </Switch>
       </div>
