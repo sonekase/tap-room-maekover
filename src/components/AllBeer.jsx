@@ -1,8 +1,7 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
 import Beer from './Beer';
-import AllBeer from './AllBeer';
-import NewBeer from './NewBeer';
+import PropTypes from 'prop-types';
 
 const state = {
   masterKegList: [
@@ -57,7 +56,7 @@ const state = {
   ]
 }
 
-function BeerList(){
+function AllBeer(props){
   var linkStyle = {
     color: '#FA5900',
     marginLeft: '18',
@@ -68,28 +67,26 @@ function BeerList(){
 
   return(
     <div>
-      <Link style={linkStyle} to='/allbeer'>BEER LIST</Link> | <Link style={linkStyle} to='/low-price'>$5 BEER</Link> | <Link style={linkStyle}  to='/low-beer'>-10 PINTS</Link> | <Link style={linkStyle}  to='/new-beer'> NEW BEER</Link>
-
-      <Switch>
-        <Route exact path='/allbeer' component={AllBeer} />
-        <Route exact path='/low-price' component={() => <Beer
-          name={state.masterKegList[2].name}
-          brewer={state.masterKegList[2].brewer}
-          description={state.masterKegList[2].description}
-          abv={state.masterKegList[2].abv}
-          price={state.masterKegList[2].price}
-          remaining={state.masterKegList[2].remaining} />} />
-        <Route exact path='/low-beer' component={() => <Beer
-          name={state.masterKegList[5].name}
-          brewer={state.masterKegList[5].brewer}
-          description={state.masterKegList[5].description}
-          abv={state.masterKegList[5].abv}
-          price={state.masterKegList[5].price}
-          remaining={state.masterKegList[5].remaining} />} />
-        <Route exact path='/new-beer' component={NewBeer} />
-        </Switch>
+      {state.masterKegList.map((entry, index) =>
+        <Beer name={entry.name}
+          brewer={entry.brewer}
+          description={entry.description}
+          abv={entry.abv}
+          price={entry.price}
+          remaining={entry.remaining}
+          key={index} />
+      )}
   </div>
   );
 }
 
-export default BeerList;
+AllBeer.propTypes = {
+  name: PropTypes.string.isRequired,
+  brewer: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  abv: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  remaining: PropTypes.string.isRequired
+}
+
+export default AllBeer;

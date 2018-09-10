@@ -5,6 +5,7 @@ import Background from './Background';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 import NewBeer from './NewBeer';
+import AllBeer from './AllBeer';
 
 function App(){
 
@@ -16,11 +17,8 @@ function App(){
         <Header/>
       </div>
       <div className="col-md-4">
-        <Switch>
-        <Route exact path='/' component={BeerList} />
-        <Route exact path='/newbeer' component={NewBeer} />
-        <Route component={Error404} />
-      </Switch>
+        <BeerList/>
+        
       </div>
     </div>
   );
