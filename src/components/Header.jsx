@@ -42,14 +42,13 @@ function Header() {
         a:hover {
           color: #FFF;
         }
-
         `}</style>
         <div className="Header">
           <h1>TAP HOUSE</h1>
           <h2>Island Brews</h2>
         </div>
         <div>
-          <Link to='/'>BEER LIST</Link> | <Link to='/low-price'>$5 BEER</Link> | <Link  to='/low-beer'>-10 PINTS</Link> | <Link  to='/new-beer'> NEW BEER</Link>
+          <Link to='/'>BEER LIST</Link> | <Link to='/low-price'>$5 BEER</Link> | <Link  to='/low-beer'>-10 PINTS</Link> | <Link  to='/newbeer'> NEW BEER</Link>
         </div>
     </div>
   );

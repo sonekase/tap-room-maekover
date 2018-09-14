@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 function NewBeer(){
   return (
@@ -8,12 +9,13 @@ function NewBeer(){
         .newBeer {
           color: #FFF;
           background-color: rgba(0,0,0,0.8);
-          height: 275%;
-          width: 104%;
-          margin-top: 5%;
-          padding-top: 10%;
+          width: 520px;
+          height: 385px;
+          margin-top: 2px;
           margin-bottom: 50%;
           padding: 5%;
+          margin-left: 2%;
+          position: sticky;
         }
         input {
           background-color: rgba(0,0,0,0.8);
@@ -51,8 +53,6 @@ function NewBeer(){
           color: #FA5900;
           font-weight: bolder;
         }
-        }
-
         `}</style>
       <h3>Enter New Beer</h3>
       <form>

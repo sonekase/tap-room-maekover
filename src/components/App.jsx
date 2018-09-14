@@ -7,6 +7,7 @@ import AllBeer from './AllBeer';
 import bg from './../img/taps.jpg';
 import { v4 } from 'uuid';
 
+
 class App extends React.Component{
 
   constructor(props) {
@@ -66,8 +67,6 @@ class App extends React.Component{
 
   }
 
-
-
 render() {
   return (
     <div>
@@ -85,6 +84,7 @@ render() {
         <Header/>
         <Switch>
           <Route exact path='/' render={()=><AllBeer allBeer={this.state.masterBeerList} />} />
+          <Route exact path='/newbeer' component={NewBeer} />
           <Route component={Error404} />
         </Switch>
       </div>

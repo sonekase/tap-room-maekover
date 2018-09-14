@@ -19,9 +19,6 @@ function Beer(props){
           margin-top: -4%;
           font-weight: lighter;
         }
-        a {
-          color: #FA5900;
-        }
         `}</style>
       <ul>
         <li>{props.name}</li>
