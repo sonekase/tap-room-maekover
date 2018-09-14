@@ -20,7 +20,7 @@ function Beer(props){
           font-weight: lighter;
         }
         a {
-          color: #FFF;
+          color: #FA5900;
         }
         `}</style>
       <ul>

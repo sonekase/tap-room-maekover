@@ -21,9 +21,9 @@ function Error404(props) {
           color: #FFF;
         }
         `}</style>
-      <h2>PAGE {props.location.pathname} NO CAN FIND...</h2>
+      <h2>PAGE {props.location.pathname} DOES NOT EXIST...</h2>
       <br/>
-      <h2>LIKE GO <Link to='/'> HOME?</Link></h2>
+      <h2>WOULD YOU LIKE TO GO <Link to='/'> HOME?</Link></h2>
     </div>
   );
 }

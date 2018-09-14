@@ -1,5 +1,4 @@
 import React from 'react';
-import { Switch, Route, Link } from 'react-router-dom';
 import Beer from './Beer';
 import PropTypes from 'prop-types';
 
@@ -57,16 +56,18 @@ const state = {
 }
 
 function AllBeer(props){
-  var linkStyle = {
-    color: '#FA5900',
-    marginLeft: '18',
-    marginRight: '18',
-    fontWeight: 'bolder',
-    fontSize: '16',
-  }
 
   return(
     <div>
+      <style jsx>{`
+          .Display {
+            height: 500px;
+            width: 500px;
+            margin-left: 2%;
+
+          }
+      `}</style>
+    <div className="Display">
       {state.masterKegList.map((entry, index) =>
         <Beer name={entry.name}
           brewer={entry.brewer}
@@ -76,6 +77,7 @@ function AllBeer(props){
           remaining={entry.remaining}
           key={index} />
       )}
+    </div>
   </div>
   );
 }
