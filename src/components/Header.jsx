@@ -33,10 +33,10 @@ function Header() {
         }
         a {
           color: #FA5900;
-          margin-left: 2.5%;
-          margin-right: 2%;
+          margin-left: 12%;
+          margin-right: -5%;
           font-weight: bolder;
-          font-size: 16;
+          font-size: 18px;
           position: sticky;
         }
         a:hover {
@@ -48,7 +48,7 @@ function Header() {
           <h2>Island Brews</h2>
         </div>
         <div>
-          <Link to='/'>BEER LIST</Link> | <Link to='/low-price'>$5 BEER</Link> | <Link  to='/low-beer'>-10 PINTS</Link> | <Link  to='/newbeer'> NEW BEER</Link>
+          <Link to='/'>BEER LIST</Link> | <Link  to='/newbeer'> NEW BEER</Link>
         </div>
     </div>
   );

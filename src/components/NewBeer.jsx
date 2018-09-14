@@ -64,6 +64,9 @@ function NewBeer(props){
           color: #FA5900;
           border: none;
           width: 25%;
+          margin-left: 12%;
+          margin-right: -5%;
+          font-size: 18px;
         }
         .home {
           background: none;

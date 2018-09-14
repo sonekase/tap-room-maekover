@@ -66,7 +66,7 @@ class App extends React.Component{
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
   }
-  
+
   handleAddingNewBeerToList(NewBeer){
   let newId = v4();
   let newMasterBeerList = Object.assign({}, this.state.masterBeerList, {newId: NewBeer});
