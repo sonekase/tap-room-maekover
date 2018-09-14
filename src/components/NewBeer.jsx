@@ -78,31 +78,32 @@ function NewBeer(props){
           type='text'
           id='name'
           placeholder=' Beer Name'
-          ref={(input) => {_name = input;}}/>
+          ref={(input)=>{_name = input;}}/>
         <input
           type='text'
           id='brewer'
           placeholder=' Brewer'
-          ref={(input) => {_brewer = input;}}/>
+          ref={(input)=>{_brewer = input;}}/>
         <input
           type='text'
           id='description'
           placeholder=' Description'
-          ref={(input) => {_description = input;}}/>
+          ref={(input)=>{_description = input;}}/>
         <input
           type='text'
           id='abv'
           placeholder=' ABV'
-          ref={(input) => {_abv = input;}}/>
+          ref={(input)=>{_abv = input;}}/>
         <input
             type='text'
             id='price'
             placeholder=' Price'
-            ref={(input) => {_price = input;}}/>
+            ref={(input)=>{_price = input;}}/>
         <input
             type='text'
             id='remaining'
-            placeholder=' Remaining'/>
+            placeholder=' Remaining'
+            ref={(input)=>{_remaining = input;}}/>
         <button type='submit'>ADD</button>
         <button className="home"><Link to='/'> HOME</Link></button>
       </form>
