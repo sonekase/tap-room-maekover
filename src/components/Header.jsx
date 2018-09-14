@@ -48,7 +48,7 @@ function Header() {
           <h2>Island Brews</h2>
         </div>
         <div>
-          <Link to='/'>BEER LIST</Link> | <Link  to='/newbeer'> NEW BEER</Link>
+          <Link to='/'>BEER LIST</Link> <Link  to='/newbeer'> NEW BEER</Link>
         </div>
     </div>
   );

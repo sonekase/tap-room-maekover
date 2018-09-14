@@ -19,6 +19,15 @@ function Beer(props){
           margin-top: -4%;
           font-weight: lighter;
         }
+        button {
+          margin-top: 1%;
+          background: none;
+          color: #FA5900;
+          border: none;
+          width: 10%;
+          margin-left: 1.5%;
+          font-weight: bolder;
+        }
         `}</style>
       <ul>
         <li>{props.name}</li>
