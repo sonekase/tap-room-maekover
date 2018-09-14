@@ -64,34 +64,40 @@ class App extends React.Component{
         }
       }
     };
-
+    this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
   }
 
-render() {
-  return (
-    <div>
-      <style jsx>{`
-        body {
-          background-image: url(${bg});
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          background-clip: content-box;
-        }
-        `}</style>
-    <div className="Row">
+  handleAddingNewBeerToList(NewBeer){
+  let newId = v4();
+  let newMasterBeerList = Object.assign({}, this.state.masterBeerList, {newId: NewBeer});
+  this.setState({masterBeerList: newMasterBeerList});
+  }
+
+  render() {
+    return (
       <div>
-        <Header/>
-        <Switch>
-          <Route exact path='/' render={()=><AllBeer allBeer={this.state.masterBeerList} />} />
-          <Route exact path='/newbeer' component={NewBeer} />
-          <Route component={Error404} />
-        </Switch>
+        <style jsx>{`
+          body {
+            background-image: url(${bg});
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-clip: content-box;
+          }
+          `}</style>
+      <div className="Row">
+        <div>
+          <Header/>
+          <Switch>
+            <Route exact path='/' render={()=><AllBeer allBeer={this.state.masterBeerList} />} />
+            <Route exact path='/newbeer' render={()=><NewBeer onAddNewBeer={this.handleAddingNewBeerToList} />} />
+            <Route component={Error404} />
+          </Switch>
+        </div>
       </div>
     </div>
-  </div>
-  );
-}
+    );
+  }
 }
 
 export default App;

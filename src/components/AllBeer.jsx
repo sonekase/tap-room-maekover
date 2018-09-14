@@ -9,7 +9,7 @@ function AllBeer(props) {
         .beerStyle {
           color: #FFF;
           width: 500px;
-          height: 520px;
+          height: 620px;
           margin-left: 2%;
         }
         `}</style>
