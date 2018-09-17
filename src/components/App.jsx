@@ -4,6 +4,7 @@ import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 import NewBeer from './NewBeer';
 import AllBeer from './AllBeer';
+import Admin from './Admin';
 import bg from './../img/taps.jpg';
 import { v4 } from 'uuid';
 
@@ -65,6 +66,7 @@ class App extends React.Component{
       }
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
+    this.handleChangingSelectedBeer = this.handleChangingSelectedBeer.bind(this);
   }
 
   handleAddingNewBeerToList(NewBeer){
@@ -73,16 +75,40 @@ class App extends React.Component{
   this.setState({masterBeerList: newMasterBeerList});
   }
 
+  handleChangingSelectedBeer(beerId){
+  this.setState({selectedBeer: beerId});
+  }
+
   render() {
     return (
       <div>
-        <style jsx>{`
+        <style global jsx>{`
           body {
             background-image: url(${bg});
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-clip: content-box;
+          }
+          h1 {
+            font-size: 6em;
+            font-weight: bolder;
+          }
+          h2 {
+            margin-top: -2%;
+            font-size: 35px;
+            margin-left: 4%;
+          }
+          a {
+            color: #FA5900;
+            margin-left: 12%;
+            margin-right: -5%;
+            font-weight: bolder;
+            font-size: 18px;
+            position: sticky;
+          }
+          a:hover {
+            color: #FFF;
           }
           `}</style>
       <div className="Row">
@@ -91,6 +117,7 @@ class App extends React.Component{
           <Switch>
             <Route exact path='/' render={()=><AllBeer allBeer={this.state.masterBeerList} />} />
             <Route exact path='/newbeer' render={()=><NewBeer onAddNewBeer={this.handleAddingNewBeerToList} />} />
+            <Route path='/admin' component={Admin}/>} />
             <Route component={Error404} />
           </Switch>
         </div>

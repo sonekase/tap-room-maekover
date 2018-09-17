@@ -20,7 +20,8 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.0.0",
-    "style-loader": "^0.23.0"
+    "style-loader": "^0.23.0",
+    "styled-jsx": "^3.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
