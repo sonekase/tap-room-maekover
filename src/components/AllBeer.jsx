@@ -3,6 +3,7 @@ import Beer from './Beer';
 import PropTypes from 'prop-types';
 
 function AllBeer(props) {
+  console.log(props.path);
   return(
     <div>
       <style jsx>{`
@@ -22,6 +23,9 @@ function AllBeer(props) {
             abv={beer.abv}
             price={beer.price}
             remaining={beer.remaining}
+            path={props.path}
+            onSellBeer={props.onSellBeer}
+            beerId={beerId}
             key={beerId} />
         })}
       </div>
@@ -30,7 +34,9 @@ function AllBeer(props) {
 }
 
 AllBeer.propTypes = {
-  allBeer: PropTypes.object
+  allBeer: PropTypes.object,
+  path: PropTypes.string,
+  onSellBeer: PropTypes.func,
 }
 
 export default AllBeer;

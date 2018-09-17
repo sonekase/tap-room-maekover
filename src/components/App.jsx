@@ -67,7 +67,7 @@ class App extends React.Component{
     };
     this.handleAddingNewBeerToList = this.handleAddingNewBeerToList.bind(this);
     this.handleChangingSelectedBeer = this.handleChangingSelectedBeer.bind(this);
-    this.handleEditBeer = this.handleEditBeer.bind(this);
+    this.handleSellBeer = this.handleSellBeer.bind(this);
   }
 
   handleAddingNewBeerToList(NewBeer){
@@ -80,11 +80,11 @@ class App extends React.Component{
   this.setState({selectedBeer: beerId});
   }
 
-  handleEditBeer(beerId, editBeer){
+  handleSellBeer(beerId){
+    console.log(beerId);
     let newAllBeer = Object.assign({}, this.state.masterBeerList);
-    newAllBeer[beerId] = editedBeer;
+    newAllBeer[beerId].remaining-- ;
     this.setState({masterBeerList: newAllBeer});
-    this.setState({selectedBeer: null});
   }
 
   render() {
@@ -125,7 +125,9 @@ class App extends React.Component{
           <Switch>
             <Route exact path='/' render={()=><AllBeer allBeer={this.state.masterBeerList} />} />
             <Route exact path='/newbeer' render={()=><NewBeer onAddNewBeer={this.handleAddingNewBeerToList} />} />
-            <Route path='/admin' render={()=><Admin allBeer={this.state.masterBeerList}/>} />
+            <Route path='/admin' render={(props)=><Admin allBeer={this.state.masterBeerList}
+              path={props.location.pathname}
+              onSellBeer={this.handleSellBeer}/>} />
             <Route component={Error404} />
           </Switch>
         </div>

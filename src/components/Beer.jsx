@@ -2,6 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Beer(props){
+  var ButtonStyle = {
+    background: 'none',
+    color: '#FA5900',
+    borderStyle: 'none',
+    fontSize: '20',
+    fontWeight: 'bolder',
+    marginTop: '15',
+    marginLeft: '10',
+  }
+  var ContainStyle = {
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    height: 'auto',
+    width: '500',
+    paddingTop: '2',
+    marginTop: '75',
+    paddingLeft: '10',
+  }
 
   const beerDetail =
     <div className="beerInfo">
@@ -20,15 +37,6 @@ function Beer(props){
           margin-top: -4%;
           font-weight: lighter;
         }
-        button {
-          margin-top: 1%;
-          background: none;
-          color: #FA5900;
-          border: none;
-          width: 10%;
-          margin-left: 1.5%;
-          font-weight: bolder;
-        }
         `}</style>
       <ul>
         <li>{props.name}</li>
@@ -44,9 +52,10 @@ function Beer(props){
     </div>;
 
     if (props.path ==='/admin') {
+       console.log(props.beerId);
       return(
-      <div className="beerInfo">
-        <h2>{props.name}</h2> <button type='button' onClick={()=>props.onSelectBeer(props.beerId)}>Edit</button>
+      <div style={ContainStyle}>
+        <h4>{props.name} | Stock | {props.remaining}<button style={ButtonStyle} type='button' onClick={()=>props.onSellBeer(props.beerId)}>SELL</button></h4>
       {beerDetail}
       </div>
   );
@@ -68,7 +77,8 @@ Beer.propTypes = {
   remaining: PropTypes.string.isRequired,
   path: PropTypes.string,
   beerId: PropTypes.string,
-  onSelectBeer: PropTypes.func
+  onSelectBeer: PropTypes.func,
+  onSellBeer: PropTypes.func
 };
 
 export default Beer;

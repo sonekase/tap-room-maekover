@@ -13,7 +13,7 @@ function Admin(props){
         color: #FFF;
         background-color: rgba(0,0,0,0.8);
         width: 520px;
-        height: 520px;
+        height: 175px;
         margin-left: 2%;
         padding: 2%;
       }
@@ -25,14 +25,20 @@ function Admin(props){
     <div className="newBeer">
       <h2>Admin</h2>
       <button className="AdminButton"><Link to='/newbeer'>ADD NEW BEER</Link></button> <Link to="/">HOME</Link>
-      <AllBeer allBeer={props.allBeer} />
+      <AllBeer allBeer={props.allBeer}
+               path={props.path}
+               onSellBeer={props.onSellBeer}
+               />
     </div>
   </div>
 );
 }
 
 Admin.propTypes = {
-  allBeer: PropTypes.object
+  allBeer: PropTypes.object,
+  path: PropTypes.string,
+  onSellBeer: PropTypes.func,
+  beerId: PropTypes.string
 }
 
 export default Admin;
