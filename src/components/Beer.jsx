@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Beer(props){
-  return(
+
+  const beerDetail =
     <div className="beerInfo">
       <style jsx>{`
         .beerInfo {
@@ -40,9 +41,23 @@ function Beer(props){
         <li>${props.price}</li> |
         <li>{props.remaining}</li>
       </ul>
-    </div>
+    </div>;
+
+    if (props.path ==='/admin') {
+      return(
+      <div className="beerInfo">
+        <h2>{props.name}</h2> <button type='button' onClick={()=>props.onSelectBeer(props.beerId)}>Edit</button>
+      {beerDetail}
+      </div>
   );
-};
+  } else {
+    return (
+      <div className="beerInfo">
+        {beerDetail}
+    </div>
+    )
+  }
+}
 
 Beer.propTypes = {
   name: PropTypes.string.isRequired,
@@ -50,7 +65,10 @@ Beer.propTypes = {
   description: PropTypes.string.isRequired,
   abv: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  remaining: PropTypes.string.isRequired
+  remaining: PropTypes.string.isRequired,
+  path: PropTypes.string,
+  beerId: PropTypes.string,
+  onSelectBeer: PropTypes.func
 };
 
 export default Beer;

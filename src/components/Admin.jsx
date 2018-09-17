@@ -5,7 +5,7 @@ import AllBeer from './AllBeer';
 import Beer from './Beer';
 import { Link } from 'react-router-dom';
 
-function Admin(){
+function Admin(props){
   return (
   <div>
     <style jsx>{`
@@ -13,7 +13,7 @@ function Admin(){
         color: #FFF;
         background-color: rgba(0,0,0,0.8);
         width: 520px;
-        height: 320px;
+        height: 520px;
         margin-left: 2%;
         padding: 2%;
       }
@@ -25,9 +25,14 @@ function Admin(){
     <div className="newBeer">
       <h2>Admin</h2>
       <button className="AdminButton"><Link to='/newbeer'>ADD NEW BEER</Link></button> <Link to="/">HOME</Link>
+      <AllBeer allBeer={props.allBeer} />
     </div>
   </div>
 );
+}
+
+Admin.propTypes = {
+  allBeer: PropTypes.object
 }
 
 export default Admin;
