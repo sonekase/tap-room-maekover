@@ -17,10 +17,14 @@ function Admin(){
         margin-left: 2%;
         padding: 2%;
       }
+      .AdminButton {
+        background: #50c3e0;
+        border-style: none;
+      }
       `}</style>
     <div className="newBeer">
       <h2>Admin</h2>
-      <Link to='/newbeer'>ADD NEW BEER</Link> <Link to="/">HOME</Link>
+      <button className="AdminButton"><Link to='/newbeer'>ADD NEW BEER</Link></button> <Link to="/">HOME</Link>
     </div>
   </div>
 );
