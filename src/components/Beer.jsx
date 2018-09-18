@@ -12,12 +12,11 @@ function Beer(props){
     marginLeft: '10',
   }
   var ContainStyle = {
-    backgroundColor: 'rgba(0,0,0,0.5)',
     height: 'auto',
     width: '500',
-    paddingTop: '2',
-    marginTop: '75',
-    paddingLeft: '10',
+    marginTop: '55',
+    marginLeft: '-35',
+    marginBottom: '25',
   }
 
   const beerDetail =
@@ -52,11 +51,11 @@ function Beer(props){
     </div>;
 
     if (props.path ==='/admin') {
-       console.log(props.beerId);
       return(
       <div style={ContainStyle}>
-        <h4>{props.name} | Stock | {props.remaining}<button style={ButtonStyle} type='button' onClick={()=>props.onSellBeer(props.beerId)}>SELL</button></h4>
-      {beerDetail}
+        <h4>{props.name} | Stock | {props.remaining}<button style={ButtonStyle} type='button' onClick={()=>props.onSellBeer(props.beerId)}>SELL</button>
+        {beerDetail}
+        </h4>
       </div>
   );
   } else {
