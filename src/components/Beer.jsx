@@ -13,13 +13,12 @@ function Beer(props){
   }
   var ContainStyle = {
     height: 'auto',
-    width: '521',
+    width: '530',
     marginTop: '53',
-    marginLeft: '-35',
-    marginBottom: '-53',
+    marginLeft: '-50',
+    marginBottom: '-55',
     padding: '15',
     paddingLeft: '15',
-    backgroundColor: 'rgba(0,0,0,0.8)',
   }
 
   const beerDetail =
@@ -30,6 +29,7 @@ function Beer(props){
           height: 25%;
           width: 104%;
           padding-top: 3%;
+          background-color: rgba(0,0,0,0.8);
         }
         li {
           list-style: none;
