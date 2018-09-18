@@ -13,10 +13,13 @@ function Beer(props){
   }
   var ContainStyle = {
     height: 'auto',
-    width: '500',
-    marginTop: '55',
+    width: '521',
+    marginTop: '53',
     marginLeft: '-35',
-    marginBottom: '25',
+    marginBottom: '-53',
+    padding: '15',
+    paddingLeft: '15',
+    backgroundColor: 'rgba(0,0,0,0.8)',
   }
 
   const beerDetail =
@@ -24,7 +27,6 @@ function Beer(props){
       <style jsx>{`
         .beerInfo {
           color: #FFF;
-          background-color: rgba(0,0,0,0.8);
           height: 25%;
           width: 104%;
           padding-top: 3%;
